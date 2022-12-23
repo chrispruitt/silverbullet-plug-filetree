@@ -7,8 +7,8 @@ const loneRangerQuotes = [
   "Get-um up, Scout!",
 ];
 
-export async function helloWorld() {
+export async function toggleFileTree() {
   await editor.flashNotification(
-    loneRangerQuotes[Math.floor(Math.random() * loneRangerQuotes.length)],
+    "whats up chris",
   );
 }

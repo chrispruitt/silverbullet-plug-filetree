@@ -1,5 +1,4 @@
-
-# SilverBullet plug for saying hello to the user
+# SilverBullet plug for saying filetree to the user
 
 A well behaved plug that will greet your users.
 
@@ -10,7 +9,8 @@ you want me to spoil the fun: it is an extensible note taking app with markdown 
 (well... there is a bit of magic in there too, but what good it would be without a little magic?)
 
 ## Build
-To build this plug, make sure you have `plugos-bundle` installed. If not, be sure to have [Deno](https://deno.land) installed first, then run:
+
+To build this plug, make sure you have `plugos-bundle` installed. If not, be sure to have [Deno](https:pwd//deno.land) installed first, then run:
 
 ```shell
 deno install -f -A --unstable --importmap https://deno.land/x/silverbullet/import_map.json https://deno.land/x/silverbullet/plugos/bin/plugos-bundle.ts
@@ -31,11 +31,13 @@ deno task watch
 Then, load the locally built plug, add it to your `PLUGS` note with an absolute path, for instance:
 
 ```
-- file:/Users/you/path/to/hello.plug.json
+- file:/Users/you/path/to/filetree.plug.json
 ```
 
 And run the `Plugs: Update` command in SilverBullet.
+
 ## Installation
+
 If you would like to install this plug straight from Github, make sure you have the `.json` file committed to the repo and simply add
 
 ```

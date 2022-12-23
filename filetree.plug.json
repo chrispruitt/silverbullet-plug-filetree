@@ -1,0 +1,16 @@
+{
+  "name": "filetree",
+  "version": 0.1,
+  "imports": [
+    "https://get.silverbullet.md/global.plug.json"
+  ],
+  "functions": {
+    "toggleFileTree": {
+      "command": {
+        "name": "Say hello"
+      },
+      "code": "(() => { var mod=(()=>{var a=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var c=Object.getOwnPropertyNames;var p=Object.prototype.hasOwnProperty;var u=(e,t)=>{for(var o in t)a(e,o,{get:t[o],enumerable:!0})},d=(e,t,o,n)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let i of c(t))!p.call(e,i)&&i!==o&&a(e,i,{get:()=>t[i],enumerable:!(n=g(t,i))||n.enumerable});return e};var l=e=>d(a({},\"__esModule\",{value:!0}),e);var Y={};u(Y,{default:()=>V});typeof self>\"u\"&&(self={syscall:()=>{throw new Error(\"Not implemented here\")}});var r=self.syscall;var s={};u(s,{dispatch:()=>L,enableReadOnlyMode:()=>E,filterBox:()=>k,flashNotification:()=>C,getCurrentPage:()=>P,getCursor:()=>v,getSelection:()=>h,getText:()=>y,hidePanel:()=>T,insertAtCursor:()=>B,insertAtPos:()=>O,matchBefore:()=>I,moveCursor:()=>q,navigate:()=>w,openUrl:()=>S,prompt:()=>N,reloadPage:()=>M,replaceRange:()=>R,save:()=>A,setPage:()=>x,setSelection:()=>b,showPanel:()=>F});function P(){return r(\"editor.getCurrentPage\")}function x(e){return r(\"editor.setPage\",e)}function y(){return r(\"editor.getText\")}function v(){return r(\"editor.getCursor\")}function h(){return r(\"editor.getSelection\")}function b(e,t){return r(\"editor.setSelection\",e,t)}function A(){return r(\"editor.save\")}function w(e,t,o=!1){return r(\"editor.navigate\",e,t,o)}function M(){return r(\"editor.reloadPage\")}function S(e){return r(\"editor.openUrl\",e)}function C(e,t=\"info\"){return r(\"editor.flashNotification\",e,t)}function k(e,t,o=\"\",n=\"\"){return r(\"editor.filterBox\",e,t,o,n)}function F(e,t,o,n=\"\"){return r(\"editor.showPanel\",e,t,o,n)}function T(e){return r(\"editor.hidePanel\",e)}function O(e,t){return r(\"editor.insertAtPos\",e,t)}function R(e,t,o){return r(\"editor.replaceRange\",e,t,o)}function q(e){return r(\"editor.moveCursor\",e)}function B(e){return r(\"editor.insertAtCursor\",e)}function I(e){return r(\"editor.matchBefore\",e)}function L(e){return r(\"editor.dispatch\",e)}function N(e,t=\"\"){return r(\"editor.prompt\",e,t)}function E(e){return r(\"editor.enableReadOnlyMode\",e)}async function m(){await s.flashNotification(\"whats up chris\")}var V=m;return l(Y);})();\n return mod;})()"
+    }
+  },
+  "assets": {}
+}

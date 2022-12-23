@@ -1,9 +1,9 @@
-name: hello-world
+name: filetree
 version: 0.1
 imports:
   - https://get.silverbullet.md/global.plug.json
 functions:
-  helloWorld:
-    path: "./hello.ts:helloWorld"
+  toggleFileTree:
+    path: "./filetree.ts:toggleFileTree"
     command:
       name: "Say hello"
