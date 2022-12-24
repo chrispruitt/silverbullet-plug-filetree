@@ -33,11 +33,6 @@ async function getTreeViewStatus(): Promise<boolean> {
 async function script(tree: any) {
   const d3js = await asset.readAsset("assets/d3.js", "utf8");
   const d3filetree = await asset.readAsset("assets/d3-filetree.js", "utf8");
-  // const d3forcetree = await asset.readAsset(
-  //   "asset/force-tree.js",
-  //   "utf8",
-  // );
-  // TODO: Get current height and width
   
   return `
     ${d3js}
@@ -46,11 +41,7 @@ async function script(tree: any) {
     const tree = ${tree};
     console.log(tree);
     const chart = FileTree(tree);
-    
   `;
-  // TODO: may not need this below but saving here
-  // const tree_div = document.querySelector('#tree');
-  //   tree_div.appendChild(chart);
   return
 }
 
@@ -94,29 +85,10 @@ async function renderTree(page: any) {
   }
 }
 
-async function buildTree(name: string) {
+async function buildTree(currentPage: string) {
   const pages = await space.listPages();
   const nodeNames = pages.map(({ name }) => {
     return name;
-  });
-
-  console.log(nodeNames)
-
-  // NOTE: This may result to the same link showing multiple times
-  //       if the same page has multiple references to another page.
-  const pageLinks = await index.queryPrefix(`pl:`);
-  const links = pageLinks.map(({ key, page }) => {
-    const [, to] = key.split(":"); // Key: pl:page:pos
-
-    if (!nodeNames.includes(to)) {
-      // Add nodes for non-existing pages which are linked to
-      nodeNames.push(to);
-    }
-    return { "source": page, "target": to };
-  });
-
-  const nodes = nodeNames.map((name) => {
-    return { "id": name };
   });
 
   let result = [];
@@ -126,9 +98,17 @@ async function buildTree(name: string) {
     path.split('/').reduce((r, name, i, a) => {
       if(!r[name]) {
         r[name] = {result: []};
-        r.result.push({name, children: r[name].result})
+        let item = {name, children: r[name].result}
+
+        // If file, add path for link. Checking if last item in array
+        if (i === a.length -1) {
+          item['path'] = `/${path}`
+          item['type'] = 'file'
+        } else {
+          item['type'] = `directory`
+        }
+        r.result.push(item)
       }
-      
       return r[name];
     }, level)
   })
