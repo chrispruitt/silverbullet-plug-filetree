@@ -100,7 +100,7 @@ async function buildTree(currentPage: string) {
         r[name] = {result: []};
         let item = {name, children: r[name].result}
 
-        // If file, add path for link. Checking if last item in array
+        // If file, add path for link. Checking if last item
         if (i === a.length -1) {
           item['path'] = `/${path}`
           item['type'] = 'file'

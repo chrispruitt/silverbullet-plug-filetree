@@ -122,7 +122,13 @@ function FileTree(data) {
     } else {
       d.children = d._children;
       d._children = null;
+      // TODO: figure out how to change pages
+      // window.location.href = d.data.path
+      // editor.SetCurrentPage(d.data.path)
     }
+    console.log(d.data.path);
+    // editor.SetCurrentPage(d.data.path);
+    // window.location.href = '...'
     d3.select(this).remove()
     update(d);
   }
