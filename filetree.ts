@@ -46,11 +46,12 @@ async function script(tree: any) {
     const tree = ${tree};
     console.log(tree);
     const chart = FileTree(tree);
+    const tree_div = document.querySelector('#tree');
+    tree_div.appendChild(chart);
     
   `;
   // TODO: may not need this below but saving here
-  // const tree_div = document.querySelector('#tree');
-  //   tree_div.appendChild(chart);
+  
   return
 }
 
@@ -86,7 +87,7 @@ async function renderTree(page: any) {
         <script src="https://gist.github.com/thehogfather/0e48ec486abbd5be17d7.js"></script>
         </head>
         <body>
-          <div class="start">
+          <div id="tree">
           </div>
         </body>
       </html>`,

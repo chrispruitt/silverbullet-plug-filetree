@@ -13,7 +13,10 @@ function FileTree(data) {
     .ease(d3.easeLinear);
 
 
-  let svg = d3.select(".start").append("svg")
+
+
+  // let svg = d3.select(".start").append("svg")
+  let svg = d3.create("svg")
     .attr("width", width) // + margin.left + margin.right)
     .attr("height", height)
     .append("g")
@@ -34,7 +37,7 @@ function FileTree(data) {
 
     var height = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom);
 
-    d3.select("svg").transition()
+    svg.transition()
       .attr("height", height);
 
     var index = -1;
@@ -123,4 +126,6 @@ function FileTree(data) {
     d3.select(this).remove()
     update(d);
   }
+
+  return Object.assign(svg.node())
 }
