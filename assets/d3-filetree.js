@@ -28,6 +28,7 @@ function FileTree(data) {
 
 
   function update(source) {
+    console.log('got here 1')
 
     // Compute the flattened node list.
     var nodes = root.descendants();
@@ -36,6 +37,8 @@ function FileTree(data) {
 
     d3.select("svg").transition()
       .attr("height", height);
+
+    console.log("got here 2")
 
     var index = -1;
     root.eachBefore((n) => {
