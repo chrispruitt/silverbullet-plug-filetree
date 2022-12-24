@@ -2,8 +2,13 @@ name: filetree
 version: 0.1
 imports:
   - https://get.silverbullet.md/global.plug.json
+assets:
+  - "assets/*"
 functions:
-  toggleFileTree:
-    path: "./filetree.ts:toggleFileTree"
+  toggleTreeView:
+    path: "./filetree.ts:toggleTreeView"
     command:
-      name: "Say hello"
+      name: "Toggle File Tree"
+      key: ctrl-shift-e
+      mac: Cmd-shift-e
+

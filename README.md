@@ -8,6 +8,19 @@ If you don't know what it is, check its [webpage](https://silverbullet.md), but 
 you want me to spoil the fun: it is an extensible note taking app with markdown and plain files at its core
 (well... there is a bit of magic in there too, but what good it would be without a little magic?)
 
+## Development
+
+1. Run these two commands in separate terminals
+
+```bash
+make run
+make plug-watch
+```
+
+2. Then open your browser to http://localhost:3000
+3. Use `cmd-shift-p` to reload the plugin
+4. Use `cmd-shift-e` to toggle filetree
+
 ## Build
 
 To build this plug, make sure you have `plugos-bundle` installed. If not, be sure to have [Deno](https:pwd//deno.land) installed first, then run:
