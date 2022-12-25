@@ -62,3 +62,11 @@ to your `PLUGS` file, run `Plugs: Update` command and off you go!
 ## What's with all that Lone Ranger quotes
 
 Don't you know that the [Lone Ranger used silver bullets to solve all the problems](https://en.wikipedia.org/wiki/Silver_bullet#Lone_Ranger)?
+
+## Roadmap
+
+- [ ] Keep tree on page reload
+- [ ] Remove First node (currently "Files")
+- [ ] Clean up scroll bars.
+- [ ] CSS to match current theme
+- [ ] Start collapsed
