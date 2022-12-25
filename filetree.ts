@@ -39,10 +39,18 @@ async function script(tree: any) {
     ${d3filetree}
     
     const tree = ${tree};
-    console.log(tree);
     const chart = FileTree(tree);
   `;
   return
+}
+
+export async function navigate(page: string) {
+  if (page.length === 0) {
+    return;
+  }
+  console.log(`navigating to ${page}`);
+
+  await editor.navigate(page);
 }
 
 // render function into the LHS
@@ -102,7 +110,7 @@ async function buildTree(currentPage: string) {
 
         // If file, add path for link. Checking if last item
         if (i === a.length -1) {
-          item['path'] = `/${path}`
+          item['path'] = `${path}`
           item['type'] = 'file'
         } else {
           item['type'] = `directory`

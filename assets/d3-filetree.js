@@ -28,8 +28,6 @@ function FileTree(data) {
 
 
   function update(source) {
-    console.log('got here 1')
-
     // Compute the flattened node list.
     var nodes = root.descendants();
 
@@ -37,8 +35,6 @@ function FileTree(data) {
 
     d3.select("svg").transition()
       .attr("height", height);
-
-    console.log("got here 2")
 
     var index = -1;
     root.eachBefore((n) => {
@@ -122,11 +118,13 @@ function FileTree(data) {
     } else {
       d.children = d._children;
       d._children = null;
-      // TODO: figure out how to change pages
-      // window.location.href = d.data.path
-      // editor.SetCurrentPage(d.data.path)
     }
-    console.log(d.data.path);
+
+    // If file, send navigate event
+    if (d.data.path) {
+      sendEvent('filetree:navigate', d.data.path);
+    }
+
     // editor.SetCurrentPage(d.data.path);
     // window.location.href = '...'
     d3.select(this).remove()

@@ -11,4 +11,8 @@ functions:
       name: "Toggle File Tree"
       key: ctrl-shift-e
       mac: Cmd-shift-e
+  navigate:
+    path: "./filetree.ts:navigate"
+    events:
+      - filetree:navigate
 
