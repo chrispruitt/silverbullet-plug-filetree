@@ -77,8 +77,10 @@ async function renderTree(page: any) {
         }
 
         .start {
-          overflow:scroll;
-          height:1000px
+          overflow-y: hidden;
+          height: 100%;
+          overflow-x: scroll;
+          width: 200px;
         }
 
       </style>
@@ -120,6 +122,8 @@ async function buildTree(currentPage: string) {
       return r[name];
     }, level)
   })
+
+  console.log(result)
 
   return {
     "name": "Files",

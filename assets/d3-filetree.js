@@ -1,15 +1,15 @@
 function FileTree(data) {
   let margin = { top: 10, right: 20, bottom: 30, left: 20 },
-    width = 960,
+    width = 150,
     height = 1000,
     barHeight = 20;
 
   let i = 0,
-    duration = 500,
+    duration = 50,
     root;
 
   let nodeEnterTransition = d3.transition()
-    .duration(750)
+    .duration(duration)
     .ease(d3.easeLinear);
 
 
