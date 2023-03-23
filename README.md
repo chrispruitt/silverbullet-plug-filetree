@@ -54,10 +54,12 @@ And run the `Plugs: Update` command in SilverBullet.
 If you would like to install this plug straight from Github, make sure you have the `.json` file committed to the repo and simply add
 
 ```
-- github:user/plugname/plugname.plug.json
+- github:chrispruitt/silverbullet-plug-filetree/filetree.plug.json
 ```
 
-to your `PLUGS` file, run `Plugs: Update` command and off you go!
+to your `PLUGS` file, then run `Plugs: Update`
+
+Toggle the tree on and off with `crtl-shft-e`
 
 ## What's with all that Lone Ranger quotes
 
